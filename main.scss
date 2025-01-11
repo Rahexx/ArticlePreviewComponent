@@ -1,2 +1,10 @@
 @import 'styles/base/reset';
 @import 'styles/utilities/variables';
+@import 'styles/utilities/mixins';
+@import 'styles/components/article';
+@import 'styles/components/share';
+@import 'styles/components/author';
+
+.container {
+  font-family: $font-primary;
+}
