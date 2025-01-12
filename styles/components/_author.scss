@@ -1,0 +1,26 @@
+.author {
+  display: flex;
+  gap: $space-16;
+
+  &__avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    color: $dark-grayish-blue;
+    line-height: $line-height-20;
+    letter-spacing: $letter-spacing-xs;
+    font-weight: $font-weight-bold;
+    font-size: $font-13;
+  }
+
+  &__publication {
+    color: $gray-blue;
+    line-height: $line-height-20;
+    letter-spacing: $letter-spacing-xs;
+    font-weight: $font-weight-medium;
+    font-size: $font-13;
+  }
+}
