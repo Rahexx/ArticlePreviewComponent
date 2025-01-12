@@ -1,6 +1,6 @@
 .share {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
   display: flex;
   align-items: center;
@@ -86,5 +86,51 @@
     opacity: 0;
     pointer-events: none;
     transform: translateY(64px);
+  }
+}
+
+@media (min-width: $breakpoint-large) {
+  .share {
+    right: -68px;
+    bottom: 96px;
+    height: 55px;
+    width: 248px;
+    padding-left: $space-36;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(0);
+    border-radius: 10px;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      height: 17px;
+      width: 17px;
+      background: $dark-grayish-blue;
+      transform: translate(-50%, 50%) rotate(45deg);
+    }
+
+    &--show {
+      opacity: 1;
+      pointer-events: all;
+      animation: shareShow 0.5s forwards;
+    }
+
+    &--hide {
+      opacity: 0;
+      pointer-events: none;
+      animation: shareHide 0.5s forwards;
+    }
+
+    &__socials {
+      margin-right: $space-56;
+    }
+
+    &__btn {
+      display: none;
+    }
   }
 }
