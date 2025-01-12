@@ -1,4 +1,40 @@
 .share {
   position: absolute;
-  display: none;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+  padding-left: $space-32;
+  background: $dark-grayish-blue;
+  opacity: 0;
+  pointer-events: none;
+
+  &__text {
+    margin-right: $space-21;
+    color: $gray-blue;
+    line-height: $line-height-20;
+    letter-spacing: $letter-spacing-l;
+    text-transform: uppercase;
+    font-weight: $font-weight-medium;
+    font-size: $font-13;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: $space-16;
+    margin-right: $space-56;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+
+  &--show {
+    opacity: 1;
+    pointer-events: all;
+  }
 }
