@@ -3,3 +3,14 @@
   font-size: $font-size;
   font-weight: $font-weight;
 }
+
+@mixin share__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
