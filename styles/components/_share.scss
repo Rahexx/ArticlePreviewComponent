@@ -10,10 +10,18 @@
   background: $dark-grayish-blue;
   opacity: 0;
   pointer-events: none;
+  transform: translateY(64px);
 
   &--show {
     opacity: 1;
     pointer-events: all;
+    animation: shareShow 0.5s forwards;
+  }
+
+  &--hide {
+    opacity: 0;
+    pointer-events: none;
+    animation: shareHide 0.5s forwards;
   }
 
   &__text {
@@ -40,5 +48,43 @@
 
   &__btn {
     @include share__btn;
+  }
+}
+
+@keyframes shareShow {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(64px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(64px);
+  }
+
+  100% {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shareHide {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+
+  99% {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(64px);
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(64px);
   }
 }
