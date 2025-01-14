@@ -54,7 +54,9 @@
 .article__footer {
   display: flex;
   align-items: center;
-  gap: 59px;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 32px;
 }
 .article__btn {
   display: flex;
@@ -100,7 +102,7 @@
     margin: 12px 0 20px;
   }
   .article__footer {
-    gap: 161px;
+    padding: 0 0;
   }
   .article__btn {
     display: flex;
